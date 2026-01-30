@@ -406,7 +406,9 @@ def render_content_block(content: str):
         st.markdown(f"[{t}]({can})")
         st.code(t, language="text")
         return
-    st.code(t, language=guess_language(t))
+    # st.code(t, language=guess_language(t))
+    # 見た目はMarkdown
+    st.markdown(t)
 
 
 def render_snippet_card(sn: Dict, conn, allow_edit: bool = True):
